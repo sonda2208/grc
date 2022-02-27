@@ -26,7 +26,6 @@ create table scans (
     created_at timestamp without time zone NOT NULL DEFAULT (now() at time zone 'utc'),
     scanning_at timestamp without time zone,
     finished_at timestamp without time zone,
-    type text not null default '',
     branch text not null default '',
     commit text not null default '',
     status text not null default '',
