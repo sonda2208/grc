@@ -1,9 +1,8 @@
 package app
 
 import (
+	"github.com/sonda2208/guardrails-challenge/jobs"
 	"github.com/sonda2208/guardrails-challenge/model"
-	"github.com/sonda2208/guardrails-challenge/scanners"
-	"github.com/sonda2208/guardrails-challenge/scanners/secret_key_scanner"
 	"github.com/sonda2208/guardrails-challenge/store"
 	"github.com/sonda2208/guardrails-challenge/store/sqlstore"
 )
@@ -12,7 +11,7 @@ type App struct {
 	config *model.Config
 
 	Store store.Store
-	js    *scanners.JobServer
+	js    *jobs.JobServer
 }
 
 func (a App) Config() model.Config {
@@ -30,13 +29,11 @@ func New(conf *model.Config) (*App, error) {
 		return nil, err
 	}
 
-	js := scanners.NewJobServer(s)
-	sks, err := secret_key_scanner.NewWorker(js)
+	js, err := jobs.NewJobServer(s)
 	if err != nil {
 		return nil, err
 	}
 
-	js.AddScanner(sks)
 	js.Start()
 
 	app := &App{

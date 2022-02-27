@@ -25,7 +25,6 @@ func (a App) GetScanByID(id int) (*model.Scan, error) {
 func (a App) CreateScan(repoID int, p *model.CreateScanPayload) (*model.Scan, error) {
 	scan := model.Scan{
 		RepoID: repoID,
-		Type:   p.Type,
 		Branch: p.Branch,
 		Commit: p.Commit,
 		Status: model.ScanStatusQueued,

@@ -12,8 +12,6 @@ const (
 	ScanStatusInProgress = "In Progress"
 	ScanStatusSuccess    = "Success"
 	ScanStatusFailure    = "Failure"
-
-	ScanTypeSecretKey = "ScanSecretKey"
 )
 
 var ScanSortableFields = map[string]string{
@@ -79,7 +77,6 @@ type Scan struct {
 	CreatedAt  time.Time  `json:"createdAt,omitempty" db:"created_at,omitempty"`
 	ScanningAt *time.Time `json:"scanningAt,omitempty" db:"scanning_at,omitempty"`
 	FinishedAt *time.Time `json:"finishedAt,omitempty" db:"finished_at,omitempty"`
-	Type       string     `json:"type" db:"type"`
 	Branch     string     `json:"branch" db:"branch"`
 	Commit     string     `json:"commit" db:"commit"`
 	Status     string     `json:"status" db:"status"`
@@ -152,4 +149,9 @@ type CreateScanPayload struct {
 	Branch string `json:"branch"`
 	Commit string `json:"commit"`
 	Type   string `json:"type"`
+}
+
+type ScanResult struct {
+	Findings Findings
+	Error    error
 }
