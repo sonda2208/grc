@@ -4,6 +4,7 @@ go 1.17
 
 require (
 	github.com/go-git/go-git/v5 v5.4.2
+	github.com/golang/mock v1.6.0
 	github.com/icrowley/fake v0.0.0-20180203215853-4178557ae428
 	github.com/jmoiron/sqlx v1.3.4
 	github.com/joho/godotenv v1.4.0

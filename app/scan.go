@@ -47,7 +47,7 @@ func (a App) RerunScan(scanID int) error {
 		return model.NewError("app.scan.rerun_in_progress_scan", "Unable to re-run a running scan.")
 	}
 
-	err = a.js.SetScanStatus(scanID, model.ScanStatusQueued, "re-run")
+	err = a.JobServer.SetScanStatus(scanID, model.ScanStatusQueued, "re-run")
 	if err != nil {
 		return err
 	}

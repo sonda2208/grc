@@ -10,8 +10,8 @@ import (
 type App struct {
 	config *model.Config
 
-	Store store.Store
-	js    *jobs.JobServer
+	Store     store.Store
+	JobServer *jobs.JobServer
 }
 
 func (a App) Config() model.Config {
@@ -37,9 +37,9 @@ func New(conf *model.Config) (*App, error) {
 	js.Start()
 
 	app := &App{
-		config: conf,
-		Store:  s,
-		js:     js,
+		config:    conf,
+		Store:     s,
+		JobServer: js,
 	}
 	return app, nil
 }
