@@ -1,5 +1,3 @@
-# guardrails-challenge
-
 ## Description
 This is a simple scanning application to detect sensitive keywords in public Git repositories.
 
@@ -18,8 +16,8 @@ The server contains several Go packages:
 
 * Cloning the repository and build
 ```
-git clone https://github.com/sonda2208/guardrails-challenge.git
-cd guardrails-challenge
+git clone https://github.com/sonda2208/grc.git
+cd grc
 go build
 ```
 * Place `config.json` file in the same directory of the executable file or set `CONFIG` environment variable with path to your configuration file.
@@ -35,5 +33,5 @@ go build
 ```
 * Then run
 ```
-./guardrails-challenge
+./grc
 ```
