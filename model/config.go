@@ -6,8 +6,7 @@ import (
 )
 
 type Config struct {
-	ServiceSetting ServiceSetting
-	SQLSetting     SQLSetting
+	SQLSetting SQLSetting
 }
 
 func ConfigFromFile(filePath string) (*Config, error) {
@@ -27,10 +26,6 @@ func ConfigFromJSON(data []byte) (*Config, error) {
 	}
 
 	return conf, nil
-}
-
-type ServiceSetting struct {
-	APIEndpoint string
 }
 
 type SQLSetting struct {
