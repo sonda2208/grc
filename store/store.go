@@ -1,6 +1,6 @@
 package store
 
-import "github.com/sonda2208/guardrails-challenge/model"
+import "github.com/sonda2208/grc/model"
 
 type Store interface {
 	Account() AccountStore

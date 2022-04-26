@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/sonda2208/guardrails-challenge/model"
+	"github.com/sonda2208/grc/model"
 )
 
 func (a App) ListScans(repoID int, opt *model.ListScansOption) ([]*model.Scan, int, error) {

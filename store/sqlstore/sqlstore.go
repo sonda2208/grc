@@ -2,15 +2,15 @@ package sqlstore
 
 import (
 	"context"
+	"github.com/upper/db/v4"
 	"time"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/pressly/goose"
 	"github.com/rs/zerolog/log"
-	"github.com/sonda2208/guardrails-challenge/model"
-	"github.com/sonda2208/guardrails-challenge/store"
-	"github.com/sonda2208/guardrails-challenge/util"
-	"github.com/upper/db/v4"
+	"github.com/sonda2208/grc/model"
+	"github.com/sonda2208/grc/store"
+	"github.com/sonda2208/grc/util"
 	"github.com/upper/db/v4/adapter/postgresql"
 
 	_ "github.com/lib/pq"

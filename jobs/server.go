@@ -1,7 +1,6 @@
 package jobs
 
 import (
-	"errors"
 	"io/ioutil"
 	"log"
 	"math/rand"
@@ -12,14 +11,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/sonda2208/guardrails-challenge/jobs/rules"
+	"github.com/sonda2208/grc/jobs/rules"
 
-	"github.com/go-git/go-git/v5"
-	"github.com/go-git/go-git/v5/plumbing"
-
-	"github.com/sonda2208/guardrails-challenge/model"
-	"github.com/sonda2208/guardrails-challenge/store"
-	"github.com/sonda2208/guardrails-challenge/util"
+	"github.com/sonda2208/grc/model"
+	"github.com/sonda2208/grc/store"
+	"github.com/sonda2208/grc/util"
 )
 
 const (
@@ -238,42 +234,42 @@ func (js *JobServer) doScan(s *model.Scan) {
 }
 
 func (js *JobServer) fetchRepository(repoPath string, url string, s *model.Scan) error {
-	var (
-		repo *git.Repository
-		err  error
-	)
-
-	cloneOpt := &git.CloneOptions{
-		URL: url,
-	}
-	if s.Branch != "" {
-		cloneOpt.ReferenceName = plumbing.NewBranchReferenceName(s.Branch)
-	}
-
-	repo, err = git.PlainClone(repoPath, false, cloneOpt)
-	if err != nil {
-		if !errors.Is(err, git.ErrRepositoryAlreadyExists) {
-			return err
-		}
-
-		repo, err = git.PlainOpen(repoPath)
-		if err != nil {
-			return err
-		}
-	}
-
-	wt, err := repo.Worktree()
-	if err != nil {
-		return err
-	}
-
-	err = wt.Checkout(&git.CheckoutOptions{
-		Hash:  plumbing.NewHash(s.Commit),
-		Force: true,
-	})
-	if err != nil {
-		return err
-	}
+	//var (
+	//	repo *git.Repository
+	//	err  error
+	//)
+	//
+	//cloneOpt := &git.CloneOptions{
+	//	URL: url,
+	//}
+	//if s.Branch != "" {
+	//	cloneOpt.ReferenceName = plumbing.NewBranchReferenceName(s.Branch)
+	//}
+	//
+	//repo, err = git.PlainClone(repoPath, false, cloneOpt)
+	//if err != nil {
+	//	if !errors.Is(err, git.ErrRepositoryAlreadyExists) {
+	//		return err
+	//	}
+	//
+	//	repo, err = git.PlainOpen(repoPath)
+	//	if err != nil {
+	//		return err
+	//	}
+	//}
+	//
+	//wt, err := repo.Worktree()
+	//if err != nil {
+	//	return err
+	//}
+	//
+	//err = wt.Checkout(&git.CheckoutOptions{
+	//	Hash:  plumbing.NewHash(s.Commit),
+	//	Force: true,
+	//})
+	//if err != nil {
+	//	return err
+	//}
 
 	return nil
 }

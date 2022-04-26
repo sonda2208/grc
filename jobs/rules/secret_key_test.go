@@ -4,9 +4,9 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/sonda2208/guardrails-challenge/jobs/rules"
+	"github.com/sonda2208/grc/jobs/rules"
 
-	"github.com/sonda2208/guardrails-challenge/util"
+	"github.com/sonda2208/grc/util"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

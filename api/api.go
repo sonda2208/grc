@@ -6,7 +6,7 @@ import (
 	"github.com/labstack/echo/middleware"
 
 	"github.com/labstack/echo"
-	"github.com/sonda2208/guardrails-challenge/app"
+	"github.com/sonda2208/grc/app"
 )
 
 type Routes struct {

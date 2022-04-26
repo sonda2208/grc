@@ -8,7 +8,7 @@ import (
 
 	"github.com/golang/mock/gomock"
 	"github.com/icrowley/fake"
-	"github.com/sonda2208/guardrails-challenge/model"
+	"github.com/sonda2208/grc/model"
 
 	"github.com/stretchr/testify/require"
 )

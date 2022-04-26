@@ -4,8 +4,8 @@ import (
 	"os"
 
 	"github.com/icrowley/fake"
-	"github.com/sonda2208/guardrails-challenge/model"
-	"github.com/sonda2208/guardrails-challenge/store/sqlstore"
+	"github.com/sonda2208/grc/model"
+	"github.com/sonda2208/grc/store/sqlstore"
 
 	"github.com/joho/godotenv"
 )

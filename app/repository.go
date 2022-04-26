@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/sonda2208/guardrails-challenge/model"
+	"github.com/sonda2208/grc/model"
 )
 
 func (a App) AddRepository(accountID int, p *model.AddRepositoryPayload) (*model.Repository, error) {

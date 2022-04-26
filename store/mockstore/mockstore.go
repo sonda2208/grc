@@ -8,8 +8,8 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	model "github.com/sonda2208/guardrails-challenge/model"
-	store "github.com/sonda2208/guardrails-challenge/store"
+	model "github.com/sonda2208/grc/model"
+	store "github.com/sonda2208/grc/store"
 )
 
 // MockStore is a mock of Store interface.

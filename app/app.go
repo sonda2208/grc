@@ -1,10 +1,10 @@
 package app
 
 import (
-	"github.com/sonda2208/guardrails-challenge/jobs"
-	"github.com/sonda2208/guardrails-challenge/model"
-	"github.com/sonda2208/guardrails-challenge/store"
-	"github.com/sonda2208/guardrails-challenge/store/sqlstore"
+	"github.com/sonda2208/grc/jobs"
+	"github.com/sonda2208/grc/model"
+	"github.com/sonda2208/grc/store"
+	"github.com/sonda2208/grc/store/sqlstore"
 )
 
 type App struct {

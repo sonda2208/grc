@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"regexp"
 
-	"github.com/sonda2208/guardrails-challenge/model"
+	"github.com/sonda2208/grc/model"
 )
 
 const (

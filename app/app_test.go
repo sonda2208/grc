@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	"github.com/sonda2208/guardrails-challenge/app"
-	"github.com/sonda2208/guardrails-challenge/jobs"
-	"github.com/sonda2208/guardrails-challenge/store"
-	"github.com/sonda2208/guardrails-challenge/store/mockstore"
+	"github.com/sonda2208/grc/app"
+	"github.com/sonda2208/grc/jobs"
+	"github.com/sonda2208/grc/store"
+	"github.com/sonda2208/grc/store/mockstore"
 )
 
 type MockStore struct {

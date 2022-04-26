@@ -1,6 +1,7 @@
 package sqlstore
 
 import (
+	"github.com/upper/db/v4"
 	"strconv"
 	"strings"
 	"time"
@@ -8,9 +9,8 @@ import (
 	"github.com/jmoiron/sqlx"
 
 	"github.com/pkg/errors"
-	"github.com/sonda2208/guardrails-challenge/model"
-	"github.com/sonda2208/guardrails-challenge/store"
-	"github.com/upper/db/v4"
+	"github.com/sonda2208/grc/model"
+	"github.com/sonda2208/grc/store"
 )
 
 const (

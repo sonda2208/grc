@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/icrowley/fake"
-	"github.com/sonda2208/guardrails-challenge/model"
+	"github.com/sonda2208/grc/model"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/stretchr/testify/require"
